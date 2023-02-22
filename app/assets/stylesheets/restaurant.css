@@ -1,0 +1,36 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 25px;
+}
+
+body a{
+  color: inherit;
+  text-decoration: inherit;
+}
+
+body a:hover{
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.card-info{
+  display: grid;
+  grid-template-columns: repeat(12, auto);
+  height: 150px;
+}
+
+.card-info .adress{
+  grid-column-start: 1;
+  grid-column-end: 8;
+}
+
+.card-info .category{
+  grid-column-start: 9;
+  grid-column-end: 12;
+}
+
+.card-bottom{
+  display: flex;
+  justify-content: flex-end;
+}
