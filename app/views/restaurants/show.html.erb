@@ -8,10 +8,12 @@
   </div>
   <div class="restaurant-reviews">
     <% unless @reviews.empty? %>
-      <p>afficher</p>
+      <% @reviews.each do |review| %>
+        <%= render 'reviews/review_card', review: review %>
+      <% end %>
     <% else %>
       <p>Il n'y a aucune review pour le moment, soyez le premier a en écrire une</p>
-      <p>Lien vers reviews add</p>
+      <%= link_to "Ajouter une review", new_restaurant_review_path(@restaurant) %>
     <% end %>
   </div>
 </div>
